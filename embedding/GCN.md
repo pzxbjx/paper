@@ -35,7 +35,7 @@ $\sigma$非线性激活函数采用$ReLU$，$\hat{D}$是$\hat{A}$的对角节点
 ![](https://github.com/pzxbjx/paper/raw/master/embedding/_figs/GCN/dataset.PNG)
 
 GCN模型与其他Baseline算法比较如下：
-![](.\_figs\GCN\result.png)
+![](https://github.com/pzxbjx/paper/raw/master/embedding/_figs/GCN/result.PNG)
 
 ### 参考资料
 [1.]SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS, Kipf et al.
