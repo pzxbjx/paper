@@ -70,7 +70,7 @@ $$
 CANE模型准确率显然要比其他的context-free模型要高。
 
 * vertex classification
-对CANE中节点的表征取一个平均池化，我们得到了一个context-aware的embedding，然后用这个embedding进行$vertex classification$的实验
+对CANE中节点的表征取一个平均池化，我们得到了一个context-aware的embedding，然后用这个embedding进行vertex classification的实验
 ![](_figs\CANE\classification.png)
 
 从这里我们又可以得到一个结论，CANE可以近似出一个较好的context-free embedding。
