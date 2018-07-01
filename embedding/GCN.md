@@ -1,10 +1,10 @@
-##GCN##
+## GCN
 
-###简介###
+### 简介
 
 现实生活中的很多数据集都是呈现出像社交网络，知识网路之类的拓扑图结构，对于这样的图结构，GCN提供了一种应用神经网络模型的方法。
 
-###课题定义###
+### 课题定义
 
 图$G=(V,E)$，模型输入是$N \times D$的$X$，其中$N$是节点的个数，$D$是节点特征的维度，$A$是图的邻接矩阵,$Z$是模型最后的输出。GCN模型要兼顾图的结构信息和节点的特征，所以我们定义神经网络的forward rule为：
 $$
@@ -12,7 +12,7 @@ H^{(l+1)}=f(H^{(l)},A)
 $$
 其中函数$f$代表每层的激活函数，我们有$H^{(0)} = X, H^{(L)} =Z$，
 
-###模型###
+### 模型
 
 我们初定$f = \sigma (AH^{(l)}W^{(l)})$，$W^{(l)}$是对应层网络的参数。
 
@@ -27,7 +27,7 @@ f(H^{(l)},A)= \sigma(\hat{D}^{-\frac{1}{2}}\hat{A} \hat{D}^{-\frac{1}{2}} H^{(l)
 $$
 $\sigma$非线性激活函数采用$ReLU$，$\hat{D}$是$\hat{A}$的对角节点度矩阵。
 
-###实验###
+### 实验
 
 在论文$\text{SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS}$中，作者进行了一系列的对比实验检验GCN的鲁棒性。
 
@@ -37,7 +37,7 @@ $\sigma$非线性激活函数采用$ReLU$，$\hat{D}$是$\hat{A}$的对角节点
 GCN模型与其他Baseline算法比较如下：
 ![](.\_figs\GCN\result.png)
 
-###参考资料###
+### 参考资料
 [1.]SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS, Kipf et al.
 [2.]http://tkipf.github.io/graph-convolutional-networks/
 
