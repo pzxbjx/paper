@@ -20,14 +20,13 @@ $$
 L(e) = L_s(e)+L_t(e)
 $$
 对于$L_s(e)$和$L_t(e)$，我们又有以下的定义：
-$$
-L_s(e)=W_{u,v}logp(v^s|u^s) \\
-p(v^s|u^s) = \frac{exp(u^s \cdot v^s)}{\sum_{z \in V}exp(u^s \cdot z^s)}\\
-L_t(e) = \alpha \cdot L_{tt}(e) + \beta \cdot L_{ts}(e) + \gamma \cdot L_{st}(e) \\
-L_{tt}(e)= W_{u,v}logp(v^t|u^t) \\
-L_{ts}(e)= W_{u,v}logp(v^t|u^s) \\
-L_{st}(e)= W_{u,v}logp(v^s|u^t) \\
-$$
+$$L_s(e)=W_{u,v}logp(v^s|u^s) $$
+$$p(v^s|u^s) = \frac{exp(u^s \cdot v^s)}{\sum_{z \in V}exp(u^s \cdot z^s)}$$
+$$L_t(e) = \alpha \cdot L_{tt}(e) + \beta \cdot L_{ts}(e) + \gamma \cdot L_{st}(e) $$
+$$L_{tt}(e)= W_{u,v}logp(v^t|u^t) $$
+$$L_{ts}(e)= W_{u,v}logp(v^t|u^s) $$
+$$L_{st}(e)= W_{u,v}logp(v^s|u^t) $$
+
 接下来我们详细介绍文本代价函数的优化。
 
 ### context-free
