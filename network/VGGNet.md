@@ -8,13 +8,13 @@ VGGNet 由牛津大学的视觉几何组提出，并取得了ILSVRC-2012竞赛�
 
 VGGNet的训练数据是224*224的RGB图片，所做的数据处理就是在样本像素矩阵中减去训练集的均值。采用了大小为3的卷积核（步长为1），大小为2的池化层（步长为1）。VGGNet的网络结构如下：
 
-![](.\_figs\VGGNet\architecture.png)
+![](https://github.com/pzxbjx/paper/raw/master/network/_figs/VGGNet/architecture.PNG)
 
 网络深度随ABCDEF递增，加深的网络中前四层卷积层以及后三层全连接层都会用网络A中的参数进行初始化，来加快模型的收敛速度。
 
 为了减少模型中的参数，VGGNet用3个串联的$3*3$卷积核代替之前$7*7$卷积核：
 
-![](.\_figs\VGGNet\kernel.png)
+![](https://github.com/pzxbjx/paper/raw/master/network/_figs/VGGNet/kernel.PNG)
 
 ### 分类框架
 
@@ -30,15 +30,15 @@ VGGNet的训练数据是224*224的RGB图片，所做的数据处理就是在样�
 
 ### 实验
 
-![](.\_figs\VGGNet\result1.png)
+![](https://github.com/pzxbjx/paper/raw/master/network/_figs/VGGNet/result1.PNG)
 
-![](.\_figs\VGGNet\result2.png)
+![](https://github.com/pzxbjx/paper/raw/master/network/_figs/VGGNet/result2.PNG)
 
 从上图可以看出来，多尺寸的预测结果稍好于单一尺寸。
 
 当取训练图片S利用尺度抖动的方法范围为[256;512]，测试图片也利用尺度抖动取256，384，512三个值进行分类结果平均值，然后探究对测试图片进行多裁剪估计的方法，即对三个尺度上每个尺度进行50次裁剪（5x5大小的正常网格，并进行两次翻转）即总共150次裁剪的效果图
 
-![](.\_figs\VGGNet\result3.png)
+![](https://github.com/pzxbjx/paper/raw/master/network/_figs/VGGNet/result3.PNG)
 
 
 ### 参考资料
