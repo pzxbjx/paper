@@ -6,7 +6,7 @@ AlexNet 是由多伦多大学Hinton组于2012年提出的深度神经网络结�
 
 ### 网络结构
 
-![](.\_figs\AlexNet\structure.png)
+![](https://github.com/pzxbjx/paper/raw/master/network/_figs/AlexNet/structure.PNG)
 
 AlexNet由8层神经网络组成，前五层为卷积层，后三层为全连接层，最后一层是输出为1000维的softmax。
 
@@ -42,13 +42,13 @@ Dropout是一种有效缓解过拟合的策略，它以一定的概率将神经�
 
 ### 训练
 
-![](.\_figs\AlexNet\learning.png)
+![](https://github.com/pzxbjx/paper/raw/master/network/_figs/AlexNet/learning.PNG)
 
 使用SGD进行训练，batch大小为128，momentum为0.9，weight decay为0.0005，在两块GPU上训练了六天时间
 
 ### 实验结果
 
-![](.\_figs\AlexNet\result.png)
+![](https://github.com/pzxbjx/paper/raw/master/network/_figs/AlexNet/result.PNG)
 
 在ILSVRC-2010上，top-1错误率为37.5%,top-5错误率为17.0%，上面三排是GPU1学习出来的特征，下半部分是GPU2学习出来的特征。可以明显的看出GPU1学习的特征大多是没有颜色的，两者都通过卷积核学习到了很多关于频率，方向方面的特征。最后一层4096维的向量可用于迁移学习，供其他任务使用。
 
