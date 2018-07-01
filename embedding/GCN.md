@@ -32,7 +32,7 @@ $\sigma$非线性激活函数采用$ReLU$，$\hat{D}$是$\hat{A}$的对角节点
 在论文$\text{SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS}$中，作者进行了一系列的对比实验检验GCN的鲁棒性。
 
 数据集为：
-![](.\_figs\GCN\dataset.png)
+![](https://github.com/pzxbjx/paper/raw/master/embedding/_figs/GCN/dataset.PNG)
 
 GCN模型与其他Baseline算法比较如下：
 ![](.\_figs\GCN\result.png)
