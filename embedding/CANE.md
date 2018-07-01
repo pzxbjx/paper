@@ -1,6 +1,6 @@
-##CANE##
+## CANE
 
-###简介###
+### 简介
 
 Context-Aware Network Embedding（CANE）是network embedding中的一种模型，在2017年ACL会议上发表。以往的embedding模型，每个网络节点都只有固定的特征表达，论文称之为静态，而CANE对每个网络节点，根据交互的节点不同，学习了不同的表征，所以定义为动态。
 
@@ -30,7 +30,7 @@ L_{st}(e)= W_{u,v}logp(v^s|u^t) \\
 $$
 接下来我们详细介绍文本代价函数的优化。
 
-###context-free###
+### context-free
 
 context-free模型的优化主要分为三步
 * $Looking-up$：根据初始的word embedding（one-hot），将文本信息转化为文本数值向量
@@ -57,7 +57,7 @@ $$
 a^p_i = \frac{exp(g^p_i)}{\sum_{j \in [1,m]} exp(g^p_j)}
 $$
 
-###实验###
+### 实验
 
 实验采用了三个数据集
 ![](_figs\CANE\dataset.png)
@@ -81,5 +81,5 @@ CANE模型准确率显然要比其他的context-free模型要高。
 
 颜色越深的词语表示注意力权重越高，显然，交互节点不同，embedding的侧重点也不同，通过动态的attention机制，CANE很好地挖掘了节点间的相关性
 
-###参考资料###
+### 参考资料
 [1.]CANE: Context-Aware Network Embedding for Relation Modeling, Cunchao Tu et al.
