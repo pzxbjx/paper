@@ -1,10 +1,10 @@
-##AlexNet##
+## AlexNet
 
-###简介####
+### 简介
 
 AlexNet 是由多伦多大学Hinton组于2012年提出的深度神经网络结构，通过在神经网络中引入卷积核并采取多种优化策略，AlexNet取得了ILSVRC-2012竞赛分类第一名的成绩。
 
-###网络结构###
+### 网络结构
 
 ![](.\_figs\AlexNet\structure.png)
 
@@ -30,7 +30,7 @@ $$
 
 一般的Pooling是不重叠的，而AlexNet使用的Pooling是可重叠的，也就是说，在池化的时候，每次移动的步长小于池化的边长。AlexNet池化的大小为3*3的正方形，每次池化移动步长为2，这样就会出现重叠。从实验结果上来看，重叠池化可以在一定程度上缓解过拟合问题。
 
-###缓解过拟合###
+### 缓解过拟合
 
 * Data Augmentation（数据增强）
 
@@ -40,19 +40,19 @@ $$
 
 Dropout是一种有效缓解过拟合的策略，它以一定的概率将神经元置零（通常为0.5），Dropout的作用可以从以下几个角度来解读，一是模拟神经生物学中完成特定任务时，大部分神经元处于失活状态；二是随机使一部分神经元失活，不同层网络组合起来体现了模型集成的思想；三是dropout也可以看做是一种特殊的L1正则
 
-###训练###
+### 训练
 
 ![](.\_figs\AlexNet\learning.png)
 
 使用SGD进行训练，batch大小为128，momentum为0.9，weight decay为0.0005，在两块GPU上训练了六天时间
 
-###实验结果###
+### 实验结果
 
 ![](.\_figs\AlexNet\result.png)
 
 在ILSVRC-2010上，top-1错误率为37.5%,top-5错误率为17.0%，上面三排是GPU1学习出来的特征，下半部分是GPU2学习出来的特征。可以明显的看出GPU1学习的特征大多是没有颜色的，两者都通过卷积核学习到了很多关于频率，方向方面的特征。最后一层4096维的向量可用于迁移学习，供其他任务使用。
 
 
-###参考资料###
+### 参考资料
 [1.]ImageNet Classification with Deep Convolutional Neural Networks, Alex et al.
 [2.]https://blog.csdn.net/tinyzhao/article/details/53035944?locationNum=9&fps=1
