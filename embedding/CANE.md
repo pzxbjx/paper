@@ -49,7 +49,7 @@ $$
 ### context-aware
 
 context-aware模型流程图如下：
-![](.\_figs\CANE\model.png)
+![](https://github.com/pzxbjx/paper/raw/master/embedding/_figs/CANE/model.PNG)
 
 前面流程大体与context-free模型相同，不同的是构建文本表征的时候，作者采用mutual attention的机制，根据交互节点的不同动态分配注意力权重，得到注意力向量：
 $$
@@ -59,24 +59,24 @@ $$
 ### 实验
 
 实验采用了三个数据集
-![](_figs\CANE\dataset.png)
+![](https://github.com/pzxbjx/paper/raw/master/embedding/_figs/CANE/dataset.PNG)
 在模型训练过程中，为了加快模型的训练速度，作者使用了负采样的trick。
 * link prediction
 模型表现效果如下：
-![](_figs\CANE\result1.png)
-![](_figs\CANE\result2.png)
-![](_figs\CANE\result3.png)
+![](https://github.com/pzxbjx/paper/raw/master/embedding/_figs/CANE/result1.PNG)
+![](https://github.com/pzxbjx/paper/raw/master/embedding/_figs/CANE/result2.PNG)
+![](https://github.com/pzxbjx/paper/raw/master/embedding/_figs/CANE/result3.PNG)
 
 CANE模型准确率显然要比其他的context-free模型要高。
 
 * vertex classification
 对CANE中节点的表征取一个平均池化，我们得到了一个context-aware的embedding，然后用这个embedding进行vertex classification的实验
-![](_figs\CANE\classification.png)
+![](https://github.com/pzxbjx/paper/raw/master/embedding/_figs/CANE/classification.PNG)
 
 从这里我们又可以得到一个结论，CANE可以近似出一个较好的context-free embedding。
 最后我们对CANE的embedding作一个可视化操作，直观感受这个模型的优点
-![](_figs\CANE\visual1.png)
-![](_figs\CANE\visual2.png)
+![](https://github.com/pzxbjx/paper/raw/master/embedding/_figs/CANE/visual1.PNG)
+![](https://github.com/pzxbjx/paper/raw/master/embedding/_figs/CANE/visual2.PNG)
 
 颜色越深的词语表示注意力权重越高，显然，交互节点不同，embedding的侧重点也不同，通过动态的attention机制，CANE很好地挖掘了节点间的相关性
 
