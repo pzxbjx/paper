@@ -1,6 +1,5 @@
 ## CANE
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default">
-</script>
+
 ### 简介
 
 Context-Aware Network Embedding（CANE）是network embedding中的一种模型，在2017年ACL会议上发表。以往的embedding模型，每个网络节点都只有固定的特征表达，论文称之为静态，而CANE对每个网络节点，根据交互的节点不同，学习了不同的表征，所以定义为动态。
@@ -13,6 +12,7 @@ context-free模型每个节点学习一个静态的表征，context-aware模型�
 
 节点的表征由两部分组成，结构特征和文本特征，即$v = v_s \oplus v_t$。
 我们定义模型的代价函数为：
+
 $$
 f = \sum_{e \in E}L(e)
 $$
