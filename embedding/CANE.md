@@ -12,7 +12,9 @@ context-free模型每个节点学习一个静态的表征，context-aware模型�
 
 节点的表征由两部分组成，结构特征和文本特征，即$v = v_s \oplus v_t$。
 我们定义模型的代价函数为：
-<img src="http://chart.googleapis.com/chart?cht=tx&chl= f = \sum_{e \in E}L(e)" style="border:none;">
+$$
+f = \sum_{e \in E}L(e)
+$$
 
 每条边的代价也可以分为两部分，结构代价$L_s(e)$和文本代价$L_t(e)$
 $$
